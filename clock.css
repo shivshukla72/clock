@@ -1,0 +1,117 @@
+body
+{
+	position: absolute;
+    top: 10%;
+    left:35%;
+    right: 35%;
+    overflow: hidden;
+   /* background-color: rgb(240,160,1);*/
+    background-image:url(clockbg1.jpg);
+    background-size: cover;
+ }
+.clocks
+{
+	border:15px solid black;
+	/*border-color:rgb(46,66,86);*/
+	width:320px;
+	height: 320px;
+	box-shadow: 0px 3px 13px 22px floralwhite;
+	border-radius: 50%;
+	background: lightgray;
+	position: relative;
+
+}
+.hours
+{
+	position: absolute;
+	border:2px solid black;
+	transform-origin: center 100%;
+	width: 2px;
+	background-color: black;
+	left:50%;
+	bottom:50%;
+	height: 23%;
+}
+.minutes
+{
+	position: absolute;
+	background-color: black;
+	border:2px solid black;
+	transform-origin: center 100%;
+	width: 2px;
+	transform: rotate(45deg);
+	bottom:50%;
+	left:50%;
+	height: 30%;
+}
+.seconds
+{
+	position: absolute;
+	border:2px solid lightcoral;
+	transform:rotate(90deg);
+	transform-origin:center 100%;
+	width: 2px;
+	left:50%;
+	bottom:50%;
+	height: 34%;
+}
+.numbers
+{
+	position: absolute;
+    left:46%;
+    top: 0%;
+    padding-bottom:282px;
+    font-size: 38px;
+
+
+}
+.circle
+{
+	position: absolute;
+	top: 48%;
+    left:48%;
+    width: 18px;
+    height: 18px;
+    border-radius:50%;
+    background-color: black;
+   
+}
+#digital
+{
+  padding-top: 15%;
+  font-size: 40px;
+  font-weight: bold;
+  margin-left: 25%;
+}
+@media screen and (max-width: 720px)
+{
+	body
+	{
+		top: 10%;
+        left:15%;
+        right:20%;
+       overflow: hidden;
+       height: 100vh;
+	}
+	.clocks
+{
+	
+	width:200px;
+	height: 200px;
+	
+}
+.numbers
+{
+    left:45%;
+    top: 0%;
+    padding-bottom:170px;
+    font-size: 31px;
+
+}
+#digital
+{
+	font-size: 25px;
+	margin-left: 35%;
+	padding-top: 20%;
+}
+}
