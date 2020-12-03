@@ -25,16 +25,23 @@ function clock()
      hours.style.transform="rotate("+hrposition+"deg)";
      minutes.style.transform="rotate("+minposition+"deg)";
      seconds.style.transform="rotate("+secposition+"deg)";
-     
-     hr=hr-12;
-     if(hr>=10 && min<10)
+  
+     if(hr>12)
      {
-     	document.querySelector("#digital").innerHTML= hr+" :"+"0" + min +" : "+sec;
-     }
-    else if(hr<10 && min>=10)
+       hr=hr-12;
+       document.querySelector("#digital").innerHTML= "0"+hr+" : "+ min +" : "+sec;
+     } 
+     else
      {
-     	document.querySelector("#digital").innerHTML= "0"+hr+" : "+ min +" : "+sec;
+      document.querySelector("#digital").innerHTML= hr+" : "+ min +" : "+sec;
      }
-
+     if(hr<10 && min<10)
+     {
+      document.querySelector("#digital").innerHTML="0"+ hr+" : "+"0"+min+" : "+sec;
+     }
+     if(hr<10 && min>10)
+     {
+      document.querySelector("#digital").innerHTML= "0"+hr+" : "+ min +" : "+sec;
+     }
    }
 var start=setInterval(clock,1000);
