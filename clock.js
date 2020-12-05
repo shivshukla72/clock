@@ -25,23 +25,39 @@ function clock()
      hours.style.transform="rotate("+hrposition+"deg)";
      minutes.style.transform="rotate("+minposition+"deg)";
      seconds.style.transform="rotate("+secposition+"deg)";
-  
+
      if(hr>12)
-     {
+     { 
+        debugger;
        hr=hr-12;
-       document.querySelector("#digital").innerHTML= "0"+hr+" : "+ min +" : "+sec;
      } 
-     else
-     {
-      document.querySelector("#digital").innerHTML= hr+" : "+ min +" : "+sec;
-     }
-     if(hr<10 && min<10)
-     {
-      document.querySelector("#digital").innerHTML="0"+ hr+" : "+"0"+min+" : "+sec;
-     }
-     if(hr<10 && min>10)
-     {
-      document.querySelector("#digital").innerHTML= "0"+hr+" : "+ min +" : "+sec;
-     }
+    if(hr<10 && min<10)
+          {
+           document.querySelector("#digital").innerHTML="0"+ hr+" : "+"0"+min+" : "+sec;
+          }
+    if(hr>9 && min<10)
+         {
+          document.querySelector("#digital").innerHTML= hr+" : "+"0"+min+" : "+sec;
+         }
+    if (hr<10 && min>9)
+        {
+         document.querySelector("#digital").innerHTML="0"+ hr+" : "+min+" : "+sec;
+        }
+    else
+        {
+         document.querySelector("#digital").innerHTML= hr+" : "+min+" : "+sec;
+        }
+    
+     // {
+     //  document.querySelector("#digital").innerHTML= hr+" : "+ min +" : "+sec;
+     // }
+     // if(hr<10 && min<10)
+     // {
+     //  document.querySelector("#digital").innerHTML="0"+ hr+" : "+"0"+min+" : "+sec;
+     // }
+     // if(hr<10 && min>10)
+     // {
+     //  document.querySelector("#digital").innerHTML= "0"+hr+" : "+ min +" : "+sec;
+     // }
    }
 var start=setInterval(clock,1000);
