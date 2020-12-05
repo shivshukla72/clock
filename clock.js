@@ -47,17 +47,6 @@ function clock()
         {
          document.querySelector("#digital").innerHTML= hr+" : "+min+" : "+sec;
         }
-    
-     // {
-     //  document.querySelector("#digital").innerHTML= hr+" : "+ min +" : "+sec;
-     // }
-     // if(hr<10 && min<10)
-     // {
-     //  document.querySelector("#digital").innerHTML="0"+ hr+" : "+"0"+min+" : "+sec;
-     // }
-     // if(hr<10 && min>10)
-     // {
-     //  document.querySelector("#digital").innerHTML= "0"+hr+" : "+ min +" : "+sec;
-     // }
+  
    }
 var start=setInterval(clock,1000);
